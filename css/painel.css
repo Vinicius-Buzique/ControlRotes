@@ -1,0 +1,154 @@
+
+.painel {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.painel h2,
+.painel h3 {
+    color: var(--azul-hero);
+    margin-top: 0;
+}
+
+.resumo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.indicador {
+    flex: 1;
+    min-width: 160px;
+    background-color: var(--branco);
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid var(--azul-hero);
+}
+
+.indicador.verde {
+    border-left-color: var(--verde);
+}
+
+.indicador .numero {
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--azul-hero);
+}
+
+.indicador .rotulo {
+    font-size: 14px;
+    color: var(--cinza-texto);
+}
+
+.painel .card {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 24px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--cinza-borda);
+}
+
+th {
+    color: var(--azul-hero);
+    background-color: var(--azul-claro);
+}
+
+.tag {
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--branco);
+}
+
+.tag.on  { background-color: var(--verde); }
+.tag.off { background-color: var(--cinza-off); }
+
+.acao {
+    border: 1px solid var(--cinza-borda);
+    background-color: var(--cinza-campo);
+    color: var(--azul-hero);
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.acao:hover {
+    background-color: var(--azul-claro);
+}
+
+.acao.remover {
+    color: var(--vermelho);
+}
+
+.indicador.laranja {
+    border-left-color: var(--laranja);
+}
+
+.subtitulo-form {
+    margin: 24px 0 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--cinza-borda);
+    color: var(--azul-hero);
+}
+
+.previa {
+    background-color: var(--azul-claro);
+    border-left: 4px solid var(--azul-hero);
+    border-radius: 4px;
+    padding: 10px 12px;
+    font-size: 13px;
+    color: var(--azul-hero);
+    margin: 12px 0;
+}
+
+input[type="range"] {
+    padding: 0;
+    height: 24px;
+}
+
+.painel .card form {
+    max-width: 520px;
+}
+
+.painel .card:has(table) {
+    overflow-x: auto;
+}
+
+.barra {
+    width: 100px;
+    height: 8px;
+    background-color: var(--cinza-borda);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 3px;
+}
+
+.barra-nivel {
+    height: 100%;
+}
+
+.barra-nivel.alto  { background-color: var(--verde); }
+.barra-nivel.medio { background-color: var(--amarelo); }
+.barra-nivel.baixo { background-color: var(--vermelho); }
+
+td small {
+    color: var(--cinza-texto);
+    font-size: 11px;
+}

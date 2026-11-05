@@ -1,0 +1,33 @@
+PALETA DE CORES - Control Rotes
+
+
+CORES PRINCIPAIS
+Azul principal (--azul-hero)          → #2A6080   Títulos, logo, botões, barra de navegação, faixa de recursos
+Azul escuro (--azul-hero-escuro)      → #1F4D68   Hover dos botões, rodapé, textos de destaque
+Cinza do topo (--cinza-topo)          → #F3F4F6   Fundo das páginas e do cabeçalho
+Branco (--branco)                     → #FFFFFF   Cards, fundo do hero, texto sobre azul
+
+CORES DE APOIO
+Azul claro (--azul-claro)             → #EEF3F6   Hover de botão contorno, cabeçalho de tabela, prévia, resultado da simulação
+Azul texto claro (--azul-texto-claro) → #DBE7EE   Texto do rodapé e links da barra de navegação
+Cinza texto (--cinza-texto)           → #4A5A66   Parágrafos e textos secundários
+Cinza borda (--cinza-borda)           → #D5DDE3   Bordas de campos, tabelas e linhas divisórias
+Cinza campo (--cinza-campo)           → #F8FAFB   Fundo dos campos de formulário
+
+CORES DE STATUS (painel)
+Verde (--verde)                       → #2E9E5B   Câmera ligada, nível alto do tanque, mensagem de sucesso
+Laranja (--laranja)                   → #E67E22   Indicador de combustível
+Amarelo (--amarelo)                   → #F1C40F   Nível médio do tanque
+Vermelho (--vermelho)                 → #E74C3C   Nível baixo do tanque, botão remover
+Vermelho claro (--vermelho-claro)     → #FFB4B4   "Encerrar Sessão" sobre a barra azul
+Cinza desligado (--cinza-off)         → #95A5A6   Câmera desligada
+
+WHATSAPP (botão flutuante)
+Verde WhatsApp (--whatsapp)           → #25D366   Fundo do botão flutuante do WhatsApp
+Verde WhatsApp escuro (--whatsapp-escuro) → #1EBE5A   Botão do WhatsApp ao passar o mouse
+
+OUTROS
+Sombra dos cards                      → rgba(0, 0, 0, 0.08)
+Foco dos campos                       → rgba(42, 96, 128, 0.15)
+Véu sobre a imagem do hero            → rgba(255, 255, 255, 0.28)
+Sombra do botão do WhatsApp           → rgba(0, 0, 0, 0.25)

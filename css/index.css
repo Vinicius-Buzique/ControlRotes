@@ -1,0 +1,9 @@
+
+
+.recursos .card {
+  transition: transform 0.15s ease;
+}
+
+.recursos .card:hover {
+  transform: translateY(-4px);
+}

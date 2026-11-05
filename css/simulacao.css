@@ -1,0 +1,19 @@
+
+.resultado-box {
+  margin-top: 24px;
+  padding: 16px;
+  background-color: var(--azul-claro);
+  border: 1px solid var(--cinza-borda);
+  border-radius: 6px;
+  text-align: left;
+}
+
+.resultado-box h3 {
+  margin-top: 0;
+  color: var(--azul-hero);
+}
+
+.resultado-box p {
+  margin: 6px 0;
+  color: var(--cinza-texto);
+}
