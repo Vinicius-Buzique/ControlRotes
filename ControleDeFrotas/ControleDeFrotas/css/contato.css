@@ -1,0 +1,10 @@
+
+
+.main-container .card p {
+  margin: 10px 0;
+  color: var(--cinza-texto);
+}
+
+.main-container .card p strong {
+  color: var(--azul-hero-escuro);
+}

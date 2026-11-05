@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Control Rotes - Login</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../css/login.css">
+<link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon_io/favicon.ico">
+</head>
+<body>
+
+    <div class="topo">
+        <a href="../../index.html" class="logo">control<strong>rotes</strong></a>
+        <nav>
+            <a href="../detalhes/detalhes.html">Empresa</a>
+            <a href="../simulacao/simulacao.html">Conheça o Sistema</a>
+            <a href="../beneficios/beneficios.html">Benefícios</a>
+            <a href="../localizacao/localizacao.html">Localização</a>
+            <a href="../contato/contato.html">Contato</a>
+            <a href="../painel/controle.html" id="linkPainel" style="display: none;">Painel de Controle</a>
+            <a href="../login/login.html" class="btn-cadastre">Cadastre-se</a>
+        </nav>
+    </div>
+  <div class="main-container">
+    <div class="card">
+      <div id="loginFormContainer">
+        <h2>Painel De Login</h2>
+        <form onsubmit="fazerLogin(event)">
+          <label>E-mail Pessoal:</label>
+          <input type="email" placeholder="usuario@gmail.com" required>
+
+          <label>Senha:</label>
+          <input type="password" placeholder="••••••••" required>
+
+          <button type="submit" class="btn-acao btn-destaque">Login</button>
+        </form>
+        <div class="switch-auth">
+          Não possui uma conta? <a onclick="alternarTelaAuth('cadastro')">Realizar Cadastro</a>
+        </div>
+        <div class="switch-auth">
+          <a href="esqueci_senha.html">Esqueci minha senha</a>
+        </div>
+      </div>
+
+      <div id="cadastroFormContainer" style="display: none;">
+        <h2>Cadastro de Nova Empresa</h2>
+        <form onsubmit="fazerLogin(event)">
+          <label>Nome Completo do Gestor:</label>
+          <input type="text" placeholder="Nome completo" required>
+
+          <label>E-mail Corporativo:</label>
+          <input type="email" placeholder="usuario@empresa.com" required>
+
+          <label>Senha de Acesso:</label>
+          <input type="password" placeholder="Defina uma senha" required>
+
+          <button type="submit" class="btn-acao btn-destaque">Finalizar Cadastro</button>
+        </form>
+        <div class="switch-auth">
+          Já possui uma conta? <a onclick="alternarTelaAuth('login')">Fazer Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <footer class="rodape-simples">
+        <p>&copy; 2026 Control Rotes. Todos os direitos reservados.</p>
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a> | <a href="../contato/contato.html">Contato</a></p>
+    </footer>
+
+  <script src="../../script/script.js"></script>
+    <script src="../../script/whatsapp.js"></script>
+</body>
+</html>

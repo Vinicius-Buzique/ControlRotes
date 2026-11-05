@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Rotes - Painel</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../css/inicio.css">
+    <link rel="stylesheet" href="../../css/painel.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon_io/favicon.ico">
+</head>
+<body>
+
+    <div class="topo">
+        <a href="../../index.html" class="logo">control<strong>rotes</strong></a>
+        <nav>
+            <a href="../inicio/home.html">Início</a>
+            <a href="../detalhes/detalhes.html">Empresa</a>
+            <a href="../simulacao/simulacao.html">Conheça o Sistema</a>
+            <a href="../beneficios/beneficios.html">Benefícios</a>
+            <a href="../localizacao/localizacao.html">Localização</a>
+            <a href="../contato/contato.html">Contato</a>
+            <a href="../painel/controle.html" aria-current="page">Painel de Controle</a>
+            <a href="../login/login.html" class="btn-sair" onclick="fazerLogout(); return false;">Sair</a>
+        </nav>
+    </div>
+
+    <div class="painel">
+
+        <h2>Painel - <span id="nomeEmpresa"></span></h2>
+
+        <div class="resumo">
+            <div class="indicador">
+                <span class="numero" id="totalVeiculos">0</span>
+                <span class="rotulo">Veículos</span>
+            </div>
+            <div class="indicador verde">
+                <span class="numero" id="totalCameras">0</span>
+                <span class="rotulo">Câmeras ligadas</span>
+            </div>
+            <div class="indicador laranja">
+                <span class="numero" id="totalTanque">0 L</span>
+                <span class="rotulo">Combustível na frota</span>
+            </div>
+            <div class="indicador">
+                <span class="numero" id="autonomiaMedia">0 km</span>
+                <span class="rotulo">Autonomia média</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Cadastrar Veículo</h3>
+            <form onsubmit="cadastrarVeiculo(event)">
+                <label>Tipo do veículo:</label>
+                <select id="veiTipo" onchange="aoMudarTipo()" required>
+                    <option value="">Selecione o tipo...</option>
+                    <option value="CARRO">Carro</option>
+                    <option value="UTILITARIO">Utilitário</option>
+                    <option value="VAN">Van</option>
+                    <option value="CAMINHAO">Caminhão</option>
+                    <option value="MOTO">Moto</option>
+                </select>
+
+                <label>Placa:</label>
+                <input type="text" id="veiPlaca" placeholder="Ex: ABC1D23" maxlength="7" required>
+
+                <label>Marca:</label>
+                <input type="text" id="veiMarca" placeholder="Ex: Fiat" required>
+
+                <label>Modelo:</label>
+                <input type="text" id="veiModelo" placeholder="Ex: Fiorino" required>
+
+                <label>Ano de fabricação:</label>
+                <input type="number" id="veiAno" min="1980" max="2030" placeholder="Ex: 2022" required>
+
+                <label>Quilometragem atual (km):</label>
+                <input type="number" id="veiKm" min="0" step="0.1" placeholder="Ex: 45000" required>
+
+                <h4 class="subtitulo-form">Combustível</h4>
+
+                <label>Tipo de combustível:</label>
+                <select id="veiCombustivel" required>
+                    <option value="">Selecione...</option>
+                    <option value="GASOLINA">Gasolina</option>
+                    <option value="ETANOL">Etanol</option>
+                    <option value="FLEX">Flex (gasolina/etanol)</option>
+                    <option value="DIESEL">Diesel</option>
+                    <option value="GNV">GNV</option>
+                    <option value="ELETRICO">Elétrico</option>
+                </select>
+
+                <label>Capacidade do tanque (litros):</label>
+                <input type="number" id="veiTanque" min="1" step="0.1" placeholder="Ex: 60" required oninput="atualizarPrevia()">
+
+                <label>Consumo médio (km/l):</label>
+                <input type="number" id="veiConsumo" min="0.1" step="0.1" placeholder="Ex: 10.5" required oninput="atualizarPrevia()">
+
+                <label>Nível atual do tanque: <span id="veiNivelTxt">100%</span></label>
+                <input type="range" id="veiNivel" min="0" max="100" value="100" oninput="atualizarPrevia()">
+
+                <div class="previa" id="veiPrevia">Preencha tanque e consumo para ver a autonomia estimada.</div>
+
+                <button type="submit" class="btn-acao btn-destaque">Cadastrar</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3>Veículos</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Placa</th>
+                        <th>Modelo</th>
+                        <th>Combustível</th>
+                        <th>Tanque</th>
+                        <th>Autonomia</th>
+                        <th>Câmera</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaVeiculos"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <footer class="rodape-simples">
+        <p>&copy; 2026 Control Rotes. Todos os direitos reservados.</p>
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a> | <a href="../contato/contato.html">Contato</a></p>
+    </footer>
+
+    <script src="../../script/script.js"></script>
+    <script src="../../script/painel.js"></script>
+    <script src="../../script/whatsapp.js"></script>
+</body>
+</html>

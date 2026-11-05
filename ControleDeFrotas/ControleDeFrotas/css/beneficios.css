@@ -1,0 +1,15 @@
+
+
+.main-container .card ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.main-container .card li {
+  margin-bottom: 12px;
+  color: var(--cinza-texto);
+}
+
+.main-container .card li strong {
+  color: var(--azul-hero-escuro);
+}
